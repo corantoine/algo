@@ -16,9 +16,14 @@ package com.example.demo;// Enoncé de l'algo Two Sum:
 //Input: nums = [3,3], target = 6
 //Output: [0,1]
 
-public class TwoSum {
+// Classe utilitaire
+public final class TwoSum {
+    private TwoSum() {
+        // Ne fait rien
+    }
+
     //Méthode pour trouver 2 indices dans un tableau dont les valeurs additionnées donnent le résultat "target"
-    public int[] twoSum(int[] nums, int target){
+    public static int[] twoSum(int[] nums, int target){
         //On boucle sur chaque élément du tableau nums
         for (int i = 0; i < nums.length; i++) {
             // On boucle sur chaque élément suivant l'élément i
