@@ -17,14 +17,20 @@
 //Output: [0,1]
 
 public class TwoSum {
+    //Méthode pour trouver 2 indices dans un tableau dont les valeurs additionnées donnent le résultat "target"
     public int[] twoSum(int[] nums, int target){
+        //On boucle sur chaque élément du tableau nums
         for (int i = 0; i < nums.length; i++) {
+            // On boucle sur chaque élément suivant l'élément i
             for (int j = i+1; j < nums.length ; j++) {
+                // On vérifie si la somme des éléments aux indices "i" et "j" est égale à "target"
                 if(nums[i] + nums[j] == target){
+                    // Si oui : retourne un tableau contenant les indices "i" et "j"
                    return new int[]{i, j};
                 }
             }
         }
+        //Si aucune paire n'est trouvée : retourne un tableau vide
     return new int[]{};
     }
 }
