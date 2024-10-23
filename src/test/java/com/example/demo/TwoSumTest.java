@@ -8,19 +8,19 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TwoSumTest {
-    private TwoSum twoSumUnderTest;
+//    private TwoSum twoSumUnderTest;
 
-    @BeforeEach
-    public void initTwoSum() {
-        twoSumUnderTest = new TwoSum();
-    }
+//    @BeforeEach
+//    public void initTwoSum() {
+//        twoSumUnderTest = new TwoSum();
+//    }
 
     @Test
     void testTwoSumOfPositiveNumbers() {
         int[] nums = {2, 7, 11, 15};
         int target = 9;
         int[] expected = {0, 1};
-        assertArrayEquals(expected, twoSumUnderTest.twoSum(nums, target));
+        assertArrayEquals(expected, TwoSum.twoSum(nums, target));
     }
 
     @ParameterizedTest(name = "Test avec nums={0}, target={1}, attendu={2}")
@@ -36,7 +36,8 @@ public class TwoSumTest {
         int[] expected = convertStringToIntArray(expectedStr);
 
         // Appel de la méthode twoSum
-        int[] result = twoSumUnderTest.twoSum(nums, target);
+        int[] result = TwoSum.twoSum(nums, target);
+
 
         // Vérification du résultat
         assertArrayEquals(expected, result);
