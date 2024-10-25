@@ -20,6 +20,8 @@ public class BuyTwoChocoTest {
         // Appel de la méthode buyChoco avec les paramètres prices et money
         int result = BuyTwoChocolates.buyChoco(prices, money);
         // Vérification que le résultat obtenu est égal au résultat attendu
+        //result est la variable contenant la chaine de caractères transformée en tableau d'entier
+        // de la méthode convertStringToInt
         assertEquals(moneyLeft, result);
     }
 
@@ -31,7 +33,7 @@ public class BuyTwoChocoTest {
         int[] result = new int[items.length];
         // Conversion de chaque élément de la chaîne en entier et stockage dans le tableau d'entiers
         for (int i = 0; i < items.length; i++) {
-            result[i] = Integer.parseInt(items[i].trim());
+            result[i] = Integer.parseInt(items[i]);
         }
         // Retour du tableau d'entiers
         return result;
