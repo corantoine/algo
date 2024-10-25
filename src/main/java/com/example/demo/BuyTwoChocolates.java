@@ -19,8 +19,12 @@ package com.example.demo;
 
 import java.util.Arrays;
 
-public class BuyTwoChocolates {
-    public int buyChoco(int[] prices, int money) {
+public final class BuyTwoChocolates {
+    public BuyTwoChocolates() {
+    }
+
+    public static int buyChoco(int[] prices, int money) {
+        // Tri du tableau par ordre croissant
         Arrays.sort(prices);
         int twoChoco = prices[0] + prices[1];
         System.out.println(twoChoco);

@@ -24,6 +24,7 @@ public class TwoSumTest {
     }
 
     @ParameterizedTest(name = "Test avec nums={0}, target={1}, attendu={2}")
+    //@CsvSource pour réutiliser le même test avec plusieurs entrants et sortants
     @CsvSource({
             "'1,2,3,4', 5, '0,3'",
             "'2,7,11,15', 9, '0,1'",
