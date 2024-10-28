@@ -6,6 +6,7 @@ package com.example.demo;
 //num1: The sum of all integers in the range [1, n] (both inclusive) that are not divisible by m.
 //num2: The sum of all integers in the range [1, n] (both inclusive) that are divisible by m.
 //Return the integer num1 - num2.
+//
 //Example 1:
 //Input: n = 10, m = 3
 //Output: 19
