@@ -44,6 +44,7 @@ public class DivisibleAndNonDivisibleSumsDifferenceTest {
         // ACT Appel de la méthode differenceOfSum
         int result = divisibleAndNonDivisibleSumsDifference.differenceOfSums(n,m);
 
+        //ASSERT on vérifie que expected == result
         Assertions.assertEquals(expected, result);
     }
 
