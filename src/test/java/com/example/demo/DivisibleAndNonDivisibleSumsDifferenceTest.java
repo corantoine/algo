@@ -31,7 +31,7 @@ public class DivisibleAndNonDivisibleSumsDifferenceTest {
         Assertions.assertEquals(result2, divisibleAndNonDivisibleSumsDifference.differenceOfSums(n2, m2));
     }
 
-    @ParameterizedTest(name = "On vérifie que la différence de n={0} - m={1} est égale à result={2}")
+    @ParameterizedTest(name = "Pour n={0} et m={1}, la différence num1 - num2 doit être {2}")
     @CsvSource({
             "10, 3, 19",
             "5, 6, 15",
