@@ -7,10 +7,10 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 public class DivisibleAndNonDivisibleSumsDifferenceTest {
 
+    DivisibleAndNonDivisibleSumsDifference divisibleAndNonDivisibleSumsDifference = new DivisibleAndNonDivisibleSumsDifference();
 
     @Test
-    void testDivisibleAndNonDivisibleSumsDifferenceTest(){
-        DivisibleAndNonDivisibleSumsDifference divisibleAndNonDivisibleSumsDifference = new DivisibleAndNonDivisibleSumsDifference();
+    void testDivisibleAndNonDivisibleSumsDifference(){
         int n = 10;
         int m = 3;
         int result = 19;
@@ -30,4 +30,21 @@ public class DivisibleAndNonDivisibleSumsDifferenceTest {
 
         Assertions.assertEquals(result2, divisibleAndNonDivisibleSumsDifference.differenceOfSums(n2, m2));
     }
+
+    @ParameterizedTest(name = "On vérifie que la différence de n={0} - m={1} est égale à result={2}")
+    @CsvSource({
+            "10, 3, 19",
+            "5, 6, 15",
+            "5, 1, -15"
+    })
+    void parameterizedTestDivisibleAndNonDivisibleSumsDifference(int n, int m, int expected){
+        // ARRANGE
+        //Ne fait rien
+
+        // ACT Appel de la méthode differenceOfSum
+        int result = divisibleAndNonDivisibleSumsDifference.differenceOfSums(n,m);
+
+        Assertions.assertEquals(expected, result);
+    }
+
 }
