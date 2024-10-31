@@ -35,3 +35,23 @@ public final class BuyTwoChocolates {
         }
     }
 }
+
+//Resolution d'algo plus opti :
+// PAS CORRECT
+class Solution {
+    public int buyChoco(int[] prices, int money) {
+        int twoChoco = 0;
+        for(int i = 0; i< prices.length; i++){
+            for (int j = i+1; j< prices.length; j++){
+                twoChoco = prices[i] + prices[j];
+                System.out.println("twoChoco = " + twoChoco);
+                if(twoChoco <= money ){
+                    int moneyLeft = money - twoChoco;
+                    return moneyLeft;
+                }
+            }
+        }
+        return money;
+    }
+}
+
